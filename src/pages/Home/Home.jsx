@@ -4,23 +4,20 @@ import Header from '../../components/Header/Header'
 import ExploreMenu from '../../components/ExploreMenu/ExploreMenu'
 import FoodDisplay from '../../components/FoodDisplay/FoodDisplay'
 import AppDownload from '../../components/AppDownload/AppDownload'
-import FoodList from '../../components/FoodList/FoodList'
 
 const Home = () => {
-    const [category, setCategory] = useState("All")
 
-    return (
-        <div className="home">
-            <Header/>
-            <ExploreMenu category={category} setCategory={setCategory}/>
-            <FoodDisplay category={category}/>
-            
-            {/* Added FoodList component here */}
-            <FoodList category={category} />
-            
-            <AppDownload />
-        </div>
-    )
+     
+    const [category,setCategory] = useState("All")
+
+  return (
+    <div>
+      <Header/>
+      <ExploreMenu category={category} setCategory={setCategory}/>
+      <FoodDisplay category={category}/>
+      <AppDownload />
+    </div>
+  )
 }
 
 export default Home
